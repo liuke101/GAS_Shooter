@@ -22,9 +22,9 @@ AGSPlayerState::AGSPlayerState()
 	// we won't be told about it by the Server. Attributes, GameplayTags, and GameplayCues will still replicate to us.
 	AbilitySystemComponent->SetReplicationMode(EGameplayEffectReplicationMode::Mixed);
 
-	// Create the attribute set, this replicates by default
-	// Adding it as a subobject of the owning actor of an AbilitySystemComponent
-	// automatically registers the AttributeSet with the AbilitySystemComponent
+	// 创建attribute set, 默认replicates
+	// 将其添加为AbilitySystemComponent的 OwnerActor的子对象
+	// AttributeSet 自动注册到 AbilitySystemComponent
 	AttributeSetBase = CreateDefaultSubobject<UGSAttributeSetBase>(TEXT("AttributeSetBase"));
 
 	AmmoAttributeSet = CreateDefaultSubobject<UGSAmmoAttributeSet>(TEXT("AmmoAttributeSet"));
